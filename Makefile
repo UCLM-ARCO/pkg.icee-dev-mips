@@ -15,7 +15,7 @@ all:
 install: HEADERS_DIR = $(DESTDIR)/usr/mips-linux-gnu/include
 install: LIB_DIR     = $(DESTDIR)/usr/mips-linux-gnu/lib
 install: SLICE_DIR   = $(DESTDIR)/usr/mips-linux-gnu/slice
-install: BIN_DIR     = $(DESTDIR)/usr/bin
+install: BIN_DIR     = $(DESTDIR)/usr/mips-linux-gnu/bin
 install:
 	install -d $(HEADERS_DIR)/IceE
 	cp -r $(SOURCE_DIR)/cppe/include/IceE/*.h $(HEADERS_DIR)/IceE
@@ -26,6 +26,9 @@ install:
 
 	install -d $(SLICE_DIR)/IceE
 	cp -r $(SOURCE_DIR)/slice/IceE/*.ice $(SLICE_DIR)/IceE
+
+	install -d $(BIN_DIR)
+	install -m 755 $(SOURCE_DIR)/cpp/bin/slice2cppe $(BIN_DIR)
 
 download:
 	wget $(SOURCE_URL)/$(SOURCE_FILE)

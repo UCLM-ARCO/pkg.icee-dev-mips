@@ -1,3 +1,9 @@
+icee-dev-mips-cross (1.3.0~2-1) unstable; urgency=low
+
+  * New release (added slice2cppe binary)
+
+ -- Oscar Aceña Herrera <oscaracena@gmail.com>  Thu, 19 Feb 2015 13:06:00 +0100
+
 icee-dev-mips-cross (1.3.0~1-1) unstable; urgency=low
 
   * New release (added slice files)
